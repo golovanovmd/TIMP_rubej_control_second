@@ -1,0 +1,29 @@
+name: Get Result
+run-name: RK2
+on: [push]
+jobs:
+  compile_on_ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Build base code
+        run: |
+          cmake -H. -B_build
+          cmake --build _build
+      - name: Run main code
+        run: |
+          ./_build/nvi
+          ./_build/crtp
+      - name: Make nvi compiled downlowdable
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled_nvi
+          path: _build/nvi
+      - name: Make crtp compiled downlowdable
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled_crtp
+          path: _build/crtp

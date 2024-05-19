@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.2)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+project(behaviour_templates)
+option(BUILD_TEST "Build test" OFF)
+add_executable(crtp ${CMAKE_CURRENT_SOURCE_DIR}/GoF-Design-Patterns_Behavioral_TemplateMethod/pizza_store_crtp.cpp)
+add_executable(nvi ${CMAKE_CURRENT_SOURCE_DIR}/GoF-Design-Patterns_Behavioral_TemplateMethod/pizza_store_nvi.cpp)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/GoF-Design-Patterns_Behavioral_TemplateMethod)
+install(TARGETS crtp nvi RUNTIME DESTINATION bin)
