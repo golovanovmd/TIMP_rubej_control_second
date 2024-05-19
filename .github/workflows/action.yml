@@ -27,3 +27,9 @@ jobs:
         with:
           name: compiled_crtp
           path: _build/crtp
+      - name: Tests
+        run: |
+          cmake -H. -B_build -DBUILD_TEST=ON
+          cmake --build _build
+          cmake --build _build --target test -- ARGS=--verbose
+          

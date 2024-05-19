@@ -55,13 +55,3 @@ private:
         std::cout << "Bake pizza in a cheap oven!" << std::endl;
     }
 };
-
-int main()
-{
-    DeliciousPizzaStore deliciousPizzaStore;
-    PoorPizzaStore poorPizzaStore;
-
-    deliciousPizzaStore.MakePizza();
-    std::cout << "----------------------------" << std::endl;
-    poorPizzaStore.MakePizza();
-}
