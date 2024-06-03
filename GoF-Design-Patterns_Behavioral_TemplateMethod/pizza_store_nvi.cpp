@@ -19,16 +19,16 @@ private:
 };
 
 class DeliciousPizzaStore : public PizzaStore
+public:
+void PutTopping_() override
+    {
+        std::cout << "Put delicious topping!" << std::endl;
+    }
 {
 private:
     void MakeDough_() override
     {
         std::cout << "Make delicious dough!" << std::endl;
-    }
-
-    void PutTopping_() override
-    {
-        std::cout << "Put delicious topping!" << std::endl;
     }
 
     void BakePizza_() override
