@@ -6,7 +6,7 @@
 class Mdps : private DeliciousPizzaStore {
 public:
 MOCK_METHOD((void), MakePizza, (), ());
-MOCK_METHOD((void), PutTopping_, (), ());
+MOCK_METHOD((void), PutTopping_, (), (override));
 };
 
 class Mpps : public PoorPizzaStore {
