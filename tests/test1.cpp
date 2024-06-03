@@ -3,7 +3,7 @@
 #include <stdexcept>
 
 
-class Mdps : public DeliciousPizzaStore {
+class Mdps : private DeliciousPizzaStore {
 public:
 MOCK_METHOD((void), MakePizza, (), ());
 MOCK_METHOD((void), PutTopping_, (), ());
