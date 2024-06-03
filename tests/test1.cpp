@@ -6,7 +6,7 @@
 class Mdps : private DeliciousPizzaStore {
 public:
 MOCK_METHOD((void), MakePizza, (), ());
-MOCK_METHOD((void), PutTopping_, (), (override));
+MOCK_METHOD((void), PutTopping_, (), ());
 };
 
 class Mpps : public PoorPizzaStore {
@@ -33,7 +33,7 @@ TEST (Poor_Pizza_Test, ppt) {
 TEST (del_pizza, tgt) {
   Mdps el1;
   EXPECT_CALL(el1, PutTopping_()).Times(AtLeast(1));
-  el1.MakePizza();
+  el1.PutTopping_();
 }
 
 
