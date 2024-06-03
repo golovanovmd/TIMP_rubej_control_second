@@ -29,5 +29,10 @@ TEST (Poor_Pizza_Test, ppt) {
   EXPECT_CALL(test_obj3, MakePizza()).Times(AtLeast(1));
   test_obj3.MakePizza();
 }
+TEST (del_pizza, tgt) {
+  Mdps el1;
+  EXPECT_CALL(el1, PutTopping_()).Times(AtLeast(1));
+  el1.MakePizza();
+}
 
 
