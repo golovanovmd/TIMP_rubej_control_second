@@ -18,7 +18,7 @@ private:
     virtual void BakePizza_() = 0;
 };
 
-class DeliciousPizzaStore : public PizzaStore
+class DeliciousPizzaStore : public PizzaStore {
 private:
     void MakeDough_() override
     {
